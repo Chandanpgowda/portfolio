@@ -1,0 +1,196 @@
+/* ============ Cards (shared) ============ */
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.6rem;
+  transition: transform 0.3s var(--ease), border-color 0.3s, box-shadow 0.3s, background 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--border-strong);
+  box-shadow: var(--shadow);
+  background: var(--bg-card-hover);
+}
+
+/* ============ About ============ */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.35fr 0.9fr;
+  gap: 2.4rem;
+  align-items: start;
+}
+
+.about-text p + p {
+  margin-top: 1rem;
+}
+
+.about-text p {
+  color: var(--text-soft);
+}
+
+.highlights {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.highlight-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+  padding: 1rem 1.2rem;
+  border-radius: var(--radius);
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  transition: border-color 0.25s, transform 0.25s var(--ease);
+}
+
+.highlight-item:hover {
+  border-color: var(--accent);
+  transform: translateX(6px);
+}
+
+.highlight-item .h-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-faint);
+}
+
+.highlight-item .h-value {
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+/* ============ Skills ============ */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.2rem;
+}
+
+.skill-card .skill-head {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1rem;
+}
+
+.skill-card .skill-head svg {
+  color: var(--accent);
+}
+
+.skill-card h3 {
+  font-size: 1.02rem;
+  font-weight: 700;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.skill-tag {
+  position: relative;
+}
+
+.skill-tag .note {
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  background: var(--bg-card);
+  border: 1px solid var(--border-strong);
+  color: var(--text-soft);
+  font-size: 0.68rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 8px;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s, transform 0.2s var(--ease);
+  z-index: 5;
+  box-shadow: var(--shadow);
+}
+
+.skill-tag:hover .note {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ============ Experience ============ */
+.timeline {
+  position: relative;
+  max-width: 760px;
+  margin-inline: auto;
+  padding-left: 2rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: linear-gradient(var(--accent), var(--accent-2), transparent);
+  border-radius: 2px;
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 1.6rem;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: -2rem;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  margin-left: -6px;
+  border-radius: 50%;
+  background: var(--bg);
+  border: 2.5px solid var(--accent);
+  box-shadow: 0 0 12px var(--glow);
+}
+
+.timeline-card .t-role {
+  font-size: 1.15rem;
+  font-weight: 700;
+}
+
+.timeline-card .t-org {
+  color: var(--accent);
+  font-weight: 600;
+  font-size: 0.94rem;
+  margin-top: 0.15rem;
+}
+
+.timeline-card .t-period {
+  font-family: var(--font-mono);
+  font-size: 0.76rem;
+  color: var(--text-faint);
+  margin-top: 0.15rem;
+}
+
+.timeline-card p {
+  color: var(--text-soft);
+  margin-top: 0.7rem;
+}
+
+.timeline-card ul {
+  margin-top: 0.8rem;
+  padding-left: 1.1rem;
+  color: var(--text-soft);
+  display: grid;
+  gap: 0.4rem;
+}
+
+.timeline-card li::marker {
+  color: var(--accent);
+}
