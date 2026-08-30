@@ -3,3 +3,6 @@ dist
 *.local
 .DS_Store
 npm-debug.log*
+build_out.txt
+build_err.txt
+npm_out.txt
