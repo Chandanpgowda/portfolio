@@ -160,6 +160,38 @@ export const projects: Project[] = [
     demo: 'https://code-synce.vercel.app/',
   },
   {
+    id: 'nexus-ops',
+    name: 'NexusOps',
+    type: 'AI-Powered IT Operations & Incident Management Platform',
+    category: 'Full-Stack',
+    short:
+      'An AI-powered, real-time IT operations & incident management platform unifying incidents, assets, problems and knowledge — with RBAC, audit logging and a local-first AI layer built on Node.js, PostgreSQL, Redis and Ollama.',
+    description:
+      'NexusOps is an enterprise-style IT service management (ITSM) platform built on a fully open-source stack — incident, problem, change, asset & knowledge management, role-based access control, audit logging, real-time collaboration via WebSockets, and a local-first AI layer backed by Ollama (no paid AI APIs required).',
+    problem:
+      'IT operations teams juggle fragmented tools — one system for tickets, another for assets, a separate knowledge base, and no intelligent help for diagnosing incidents. When an incident occurs, technicians waste time searching documentation, manually categorizing tickets, and duplicating work on past issues, while managers lack real-time visibility into workload and SLA compliance. NexusOps unifies all of these into one cohesive platform and adds AI assistance so incidents resolve faster.',
+    contribution:
+      'I built NexusOps end-to-end as an npm-workspaces monorepo — the React/TypeScript frontend, the Node.js/Express API, the real-time layer with Socket.IO and Redis, the PostgreSQL data model with Prisma + pgvector, BullMQ background workers, an RBAC system with 4 roles and 18 fine-grained permissions, audit logging, secure file uploads, the Ollama-powered AI layer, and a production Docker Compose deployment.',
+    features: [
+      'Incident, problem, change, asset & knowledge management',
+      '4 RBAC roles (ADMIN, IT_MANAGER, TECHNICIAN, EMPLOYEE) with 18 permissions',
+      'Real-time collaboration, notifications & presence (Socket.IO)',
+      'AI incident classification, priority recommendation & cause analysis (Ollama)',
+      'RAG-powered knowledge assistant & semantic duplicate detection',
+      'SLA engine with multi-status incident lifecycle',
+      'Audit logging & admin panel',
+      'Secure file uploads',
+      '44 automated backend tests (Vitest + Supertest)',
+      'Production Docker Compose deployment',
+    ],
+    tech: [
+      'React 18', 'TypeScript', 'Vite', 'Node.js', 'Express', 'Socket.IO',
+      'PostgreSQL 16 + pgvector', 'Prisma', 'Redis 7', 'BullMQ',
+      'Ollama', 'JWT', 'Docker', 'GitHub Actions',
+    ],
+    github: 'https://github.com/Chandanpgowda/nexusOps',
+  },
+  {
     id: 'blood-link',
     name: 'Blood Donation Management System',
     type: 'Responsive Web Platform',
@@ -282,6 +314,7 @@ export const blogPosts = [
 
 // Fallback repos shown if the GitHub API is rate-limited or unavailable.
 export const fallbackRepos = [
+  { name: 'nexusOps', description: 'AI-powered, real-time IT operations & incident management platform.', language: 'TypeScript', html_url: 'https://github.com/Chandanpgowda/nexusOps' },
   { name: 'codeSynce', description: 'Real-time collaborative coding platform with AI assistance.', language: 'TypeScript', html_url: 'https://github.com/Chandanpgowda/codeSynce' },
   { name: 'blood-link', description: 'Blood donation management system — connecting donors and recipients.', language: 'JavaScript', html_url: 'https://blood-link-steel.vercel.app' },
 ];
